@@ -1,0 +1,9 @@
+header#header
+  .wrapper.clearfix
+    #account.pull-left
+      - if(user)
+        div Logged in as #{user.displayName}
+        div
+          a(href='/logout') Log out
+      - else
+        a(href='/auth/facebook') Log in
